@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sharlene's work on AJAX & Bootstrap</title>
+    <link rel="shortcut icon" href="#" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"
+        integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.css" />
+    <style>
+        * {
+            box-sizing: border-box;
+            font-family: "微軟正黑體";
+            color: darkslategrey;
+        }
+
+    </style>
+
+</head>
+
+<body>
+    <div class="container" id="rotate">
+        <!-- Carousel -->
+        <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+
+            <!-- Indicators/dots -->
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+                <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+                <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+            </div>
+
+            <!-- The slideshow/carousel -->
+            <div class="carousel-inner">
+
+                <div class="carousel-item active">
+                    <img src="https://fastly.picsum.photos/id/324/3888/2592.jpg?hmac=DZkyIS42bw6Me8jO8Q1TLdX2IGneZYRShExpmRrMiuU"
+                        height=500px alt="EZ Walks" class="d-block" style="width:100%">
+                    <div class="carousel-caption">
+                        <h3 class="fw-bolder">親近自然</h3>
+                        <p class="bg-success text-white rounded-pill">難度1級步道</p>
+                    </div>
+                </div>
+
+                <div class="carousel-item">
+                    <img src="https://fastly.picsum.photos/id/243/2300/1533.jpg?hmac=BnvN5jcWjSaFHq5vJoJjJltaTOWalVdYo2iR6-s03bI"
+                        height=500px alt="Mid Walks" class="d-block" style="width:100%">
+                    <div class="carousel-caption">
+                        <h3 class="fw-bolder">進階行腳</h3>
+                        <p class="bg-warning text-success-emphasis rounded-pill">難度2級步道</p>
+                    </div>
+                </div>
+
+                <div class="carousel-item">
+                    <img src="https://fastly.picsum.photos/id/177/2515/1830.jpg?hmac=G8-2Q3-YPB2TreOK-4ofcmS-z5F6chIA0GHYAe5yzDY"
+                        height=500px alt="Hard Walks" class="d-block" style="width:100%">
+                    <div class="carousel-caption">
+                        <h3 class="fw-bolder">挑戰極限</h3>
+                        <p class="bg-danger text-white rounded-pill width-25">難度3-5級步道</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Left and right controls/icons -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </button>
+        </div>
+
+    </div>
+
+    <div class="container mt-3 conWalks" id="ez">
+        <div class="row mx-auto ps-5 d-flex">
+            <div class="col-lg-4 col-sm-12 mt-2">
+                <div class="card" style="width: 18rem;">
+                    <img src="./IMGS/EZ_茂興懷舊步道.jpg" class="card-img-top" alt="茂興懷舊步道">
+                    <div class="card-body">
+                        <h5 class="card-title">茂興懷舊步道</h5>
+                        <p class="card-text">起點為太平山蹦蹦車茂興月臺站，沿舊蹦蹦車軌道整建，坡度平緩、全程1.5公里。是日治時期興建的「古運材軌道」、四季皆宜造訪...</p>
+                        <a href="https://recreation.forest.gov.tw/Trail/RT?typ=1&tr_id=016"
+                            class="btn btn-success">更多資訊</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-sm-12 mt-2">
+                <div class="card" style="width: 18rem;">
+                    <img src="./IMGS/EZ_檜木原始林步道.jpg" class="card-img-top" alt="檜木原始林步道">
+                    <div class="card-body">
+                        <h5 class="card-title">檜木原始林步道</h5>
+                        <p class="card-text">位於太平山森林遊樂區，步道全程1.29公里、由木棧道及石子路構成。是四季皆宜造訪的原始檜木林
+                            。中途可連接至鐵杉林自然步道...</p>
+                        <a href="https://recreation.forest.gov.tw/Trail/RT?typ=1&tr_id=165"
+                            class="btn btn-success">更多資訊</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-sm-12 mt-2">
+                <div class="card" style="width: 18rem;">
+                    <img src="./IMGS/EZ_金瓜寮魚蕨步道.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">金瓜寮魚蕨步道</h5>
+                        <p class="card-text">位於新北市坪林區全長1.06公里。全線沿著金瓜寮溪蜿蜒行進、有較多階梯。可觀苦花魚、馬口魚、多種蕨類，適合親子出遊...
+                        </p>
+                        <a href="https://recreation.forest.gov.tw/Trail/RT?typ=1&tr_id=004"
+                            class="btn btn-success">更多資訊</a>
+                    </div>
+                </div>
+            </div>
+            <!-- </div> -->
+
+            <!-- <div class="row mt-3 ps-5"> -->
+            <div class="col-lg-4 col-sm-12 mt-2">
+                <div class="card" style="width: 18rem;">
+                    <img src="./IMGS/EZ_拳頭姆自然步道.jpg" class="card-img-top" alt="拳頭姆自然步道">
+                    <div class="card-body">
+                        <h5 class="card-title">拳頭姆自然步道</h5>
+                        <p class="card-text">位於宜蘭縣三星鄉，步道全程1.3公里、路面以原木及碎木屑鋪設。環境為烏心石造林地，有豐富蕨類與植物，步道坡度平緩，行走輕鬆...</p>
+                        <a href="https://recreation.forest.gov.tw/Trail/RT?typ=1&tr_id=005"
+                            class="btn btn-success">更多資訊</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-sm-12 mt-2">
+                <div class="card" style="width: 18rem;">
+                    <img src="./IMGS/EZ_九寮溪自然步道.jpg" class="card-img-top" alt="九寮溪自然步道">
+                    <div class="card-body">
+                        <h5 class="card-title">九寮溪自然步道</h5>
+                        <p class="card-text">位於宜蘭縣大同鄉，步道全程3公里傍溪而行。全線為平坦土石路，輕鬆好走直達瀑布，林蔭茂密、附生植物及蕨類繁盛...</p>
+                        <a href="https://recreation.forest.gov.tw/Trail/RT?typ=1&tr_id=012"
+                            class="btn btn-success">更多資訊</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-sm-12 mt-2">
+                <div class="card" style="width: 18rem;">
+                    <img src="./IMGS/EZ_新寮瀑布步道.jpg" class="card-img-top" alt="新寮瀑布步道">
+                    <div class="card-body">
+                        <h5 class="card-title">新寮瀑布步道</h5>
+                        <p class="card-text">位於宜蘭縣冬山鄉全長1.5公里，沿著新寮溪溪谷溯源而上。第一層步道的前0.9k較平坦，通往第二層瀑布的石階路較陡但瀑布規模較大...
+                        </p>
+                        <a href="https://recreation.forest.gov.tw/Trail/RT?typ=1&tr_id=011"
+                            class="btn btn-success">更多資訊</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- <div class="row mt-3">
+            <div class="d-grid">
+                <button type="button" class="btn btn-primary btn-success" id="ezBtn">點選更多親近自然步道</button>
+            </div>
+            <p class="">*以下表格建議以電腦裝置瀏覽*</p>
+            <table id="ezTable" class="bg-success-subtle">
+
+                <thead>
+                    <tr>
+                        <th>步道名稱</th>
+                        <th>步道入口</th>
+                        <th>海拔高度</th>
+                        <th>步道長度</th>
+                        <th>步道類型</th>
+                        <th>步道類型特色</th>
+                    </tr>
+                </thead>
+                <tbody id="ezTbody">
+                 
+                </tbody>
+            </table>
+        </div> -->
+    </div>
+
+    <div class="container mt-3  conWalks" id="mid">
+        <div class="row mx-auto ps-5 d-flex">
+            <div class="col-lg-4 col-sm-12 mt-2">
+                <div class="card" style="width: 18rem;">
+                    <img src="./IMGS/MID_滿月圓國家森林遊樂區步道群.jpg" class="card-img-top" alt="滿月圓步道群">
+                    <div class="card-body">
+                        <h5 class="card-title">滿月圓步道群</h5>
+                        <p class="card-text">距離新北市三峽市區40分鐘，步道全程4.2公里。有豐富的鳥類與兩棲、蝴蝶生態，健行步道盡頭還有滿月圓瀑布與處女瀑布...</p>
+                        <a href="https://recreation.forest.gov.tw/Forest/RA?typ=0&typ_id=0200001"
+                            class="btn btn-warning">更多資訊</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-sm-12 mt-2">
+                <div class="card" style="width: 18rem;">
+                    <img src="./IMGS/MID_礁溪跑馬古道.jpg" class="card-img-top" alt="礁溪跑馬古道">
+                    <div class="card-body">
+                        <h5 class="card-title">礁溪跑馬古道</h5>
+                        <p class="card-text">全程6.7公里連結新北市坪林區、宜蘭縣頭城鎮，是先民運輸補給路線。沿途可瞭望蘭陽平原、龜山島、廢棄礦坑、柑橘果園、溪流等...</p>
+                        <a href="https://recreation.forest.gov.tw/Trail/RT?typ=1&tr_id=007"
+                            class="btn btn-warning">更多資訊</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-sm-12 mt-2">
+                <div class="card" style="width: 18rem;">
+                    <img src="./IMGS/MID_林美石磐步道.jpg" class="card-img-top" alt="林美石磐步道">
+                    <div class="card-body">
+                        <h5 class="card-title">林美石磐步道</h5>
+                        <p class="card-text">位於礁溪鄉林美村全長1.7公里。沿途常見溪流瀑布、大小不一的水潭與峽谷地形，景色秀麗，有「宜蘭的小太魯閣」之稱...
+                        </p>
+                        <a href="https://recreation.forest.gov.tw/Trail/RT?typ=1&tr_id=008"
+                            class="btn btn-warning">更多資訊</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-3 ps-5">
+            <div class="col-lg-4 col-sm-12 mt-2">
+                <div class="card" style="width: 18rem;">
+                    <img src="./IMGS/EZ_拳頭姆自然步道.jpg" class="card-img-top" alt="鳩之澤自然步道">
+                    <div class="card-body">
+                        <h5 class="card-title">鳩之澤自然步道</h5>
+                        <p class="card-text">位於宜蘭縣大同鄉、全程1.1公里、以碎石路及木棧道階梯鋪設。步道與鳩之澤溫泉隔著多望溪，鳥鳴聲不絕於耳，而得其名。...</p>
+                        <a href="https://recreation.forest.gov.tw/Trail/RT?typ=1&tr_id=020"
+                            class="btn btn-warning">更多資訊</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-sm-12 mt-2">
+                <div class="card" style="width: 18rem;">
+                    <img src="./IMGS/MID_望洋山步道.jpg" class="card-img-top" alt="望洋山步道">
+                    <div class="card-body">
+                        <h5 class="card-title">望洋山步道</h5>
+                        <p class="card-text">在宜蘭縣南澳鄉標高2,050公尺、全程1.2公里。步道終點有景觀平臺，可看到南澳北溪侵蝕而成的山谷，也是觀賞日出及雲海的好地點...</p>
+                        <a href="https://recreation.forest.gov.tw/Trail/RT?typ=1&tr_id=021"
+                            class="btn btn-warning">更多資訊</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-sm-12 mt-2">
+                <div class="card" style="width: 18rem;">
+                    <img src="./IMGS/MID_哈盆越嶺步道.jpg" class="card-img-top" alt="哈盆越嶺步道">
+                    <div class="card-body">
+                        <h5 class="card-title">哈盆越嶺步道
+                        </h5>
+                        <p class="card-text">由新北烏來進入、步道止於露門溪交會地(留有警備道遺址)再原路折返，來回約14公里、費時6～7小時。下方為南勢溪、闊葉樹群落...
+                        </p>
+                        <a href="https://recreation.forest.gov.tw/Trail/RT?typ=1&tr_id=031"
+                            class="btn btn-warning">更多資訊</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- <div class="row mt-3">
+            <div class="d-grid">
+                <button type="button" class="btn btn-primary btn-warning" id="midBtn">點選更多進階級步道</button>
+            </div>
+            <p class="">*以下表格建議以電腦裝置瀏覽*</p>
+            <table id="midTable" class="bg-warning-subtle">
+
+                <thead>
+                    <tr>
+                        <th>步道名稱</th>
+                        <th>步道入口</th>
+                        <th>海拔高度</th>
+                        <th>步道長度</th>
+                        <th>步道類型</th>
+                        <th>步道類型特色</th>
+                    </tr>
+                </thead>
+                <tbody id="midTbody">
+                    
+                </tbody>
+            </table>
+        </div> -->
+
+    </div>
+
+    <div class="container mt-3  conWalks" id="hard">
+        <div class="row mx-auto ps-5">
+            <div class="col-lg-4 col-sm-12 mt-2">
+                <div class="card" style="width: 18rem;">
+                    <img src="./IMGS/HARD_福巴越嶺國家步道.jpg" class="card-img-top" alt="福巴越嶺國家步道">
+                    <div class="card-body">
+                        <h5 class="card-title">福巴越嶺國家步道
+                        </h5>
+                        <p class="card-text">全程17.5公里原始山徑，整個路徑貫穿拉拉山巨木區及插天山自然保留區，沿線有許多紅檜巨木，也是野生動物生活的重要棲地環境，物種豐富多樣...</p>
+                        <a href="https://recreation.forest.gov.tw/Trail/RT?typ=1&tr_id=024"
+                            class="btn btn-danger">更多資訊</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-sm-12 mt-2">
+                <div class="card" style="width: 18rem;">
+                    <img src="./IMGS/HARD_北插天山登山步道.jpg" class="card-img-top" alt="北插天山登山步道  ">
+                    <div class="card-body">
+                        <h5 class="card-title">北插天山登山步道 </h5>
+                        <p class="card-text">位於桃園市復興區、全程6.3公里原始山徑。終年雲霧繚繞，附近又有赫威巨木群，10月底至11月初還可觀賞山毛櫸由綠轉黃澄的變葉景觀...</p>
+                        <a href="https://recreation.forest.gov.tw/Trail/RT?typ=1&tr_id=025"
+                            class="btn btn-danger">更多資訊</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-sm-12 mt-2">
+                <div class="card" style="width: 18rem;">
+                    <img src="./IMGS/HARD_北得拉曼巨木步道.jpg" class="card-img-top" alt="北得拉曼巨木步道">
+                    <div class="card-body">
+                        <h5 class="card-title">北得拉曼巨木步道</h5>
+                        <p class="card-text">在新竹縣尖石鄉全長2.6公里，原始山徑、偶攀爬岩壁/木梯。沿途有迴音谷、小瀑布，1.6公里處下行往巨木群為循環線可欣賞四株紅檜巨木...</p>
+                        <a href="https://recreation.forest.gov.tw/Trail/RT?typ=1&tr_id=035"
+                            class="btn btn-danger">更多資訊</a>
+                    </div>
+                </div>
+            </div>
+            <!-- </div> -->
+
+            <!-- <div class="row mt-3 ps-5"> -->
+            <div class="col-lg-4 col-sm-12 mt-2">
+                <div class="card" style="width: 18rem;">
+                    <img src="./IMGS/HARD_加里山登山步道.jpg" class="card-img-top" alt="加里山登山步道">
+                    <div class="card-body">
+                        <h5 class="card-title">加里山登山步道</h5>
+                        <p class="card-text">位於苗栗縣南庄鄉、全程5.8公里。沿途可見伐木時期的台車鐵軌，山頂視野遼闊，可遠眺氣勢磅礡的雪山聖稜線和鄰近的鹿場大山...</p>
+                        <a href="https://recreation.forest.gov.tw/Trail/RT?typ=1&tr_id=043"
+                            class="btn btn-danger">更多資訊</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-sm-12 mt-2">
+                <div class="card" style="width: 18rem;">
+                    <img src="./IMGS/HARD_波津加山步道.jpg" class="card-img-top" alt="波津加山步道">
+                    <div class="card-body">
+                        <h5 class="card-title">波津加山步道</h5>
+                        <p class="card-text">位於台中市和平區，全程3.2公里。波津加」的由來據說是因步道坡度陡峭，高低差約1千公尺，全段幾乎都在爬升，來回時間需7～8小時。...</p>
+                        <a href="https://recreation.forest.gov.tw/Trail/RT?typ=1&tr_id=055"
+                            class="btn btn-danger">更多資訊</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-sm-12 mt-2">
+                <div class="card" style="width: 18rem;">
+                    <img src="./IMGS/HARD_合歡尖山步道.jpg" class="card-img-top" alt="合歡尖山步道">
+                    <div class="card-body">
+                        <h5 class="card-title">合歡尖山步道</h5>
+                        <p class="card-text">位於南投縣仁愛鄉，海拔高度3217公尺、全長0.4公里山徑。部分路段需拉繩、手腳併用而上。山頂腹地小但展望佳，合歡群峰盡收眼底...
+                        </p>
+                        <a href="https://recreation.forest.gov.tw/Trail/RT?typ=1&tr_id=061"
+                            class="btn btn-danger">更多資訊</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- <div class="row mt-3">
+            <div class="d-grid">
+                <button type="button" class="btn btn-primary btn-danger" id="hardBtn">點選更多挑戰級步道</button>
+            </div>
+            <p class="">*以下表格建議以電腦裝置瀏覽*</p>
+            <table id="hardTable" class="bg-danger-subtle">
+
+                <thead>
+                    <tr>
+                        <th>步道名稱</th>
+                        <th>步道入口</th>
+                        <th>海拔高度</th>
+                        <th>步道長度</th>
+                        <th>步道類型</th>
+                        <th>步道類型特色</th>
+                    </tr>
+                </thead>
+                <tbody id="hardTbody">
+
+                </tbody>
+            </table>
+        </div> -->
+
+    </div>
+
+
+    <div class="container" id="searchWalks">
+        <div class="row">
+            <div class="row mt-5">
+                <div class="d-grid">
+                    <button type="button" class="btn btn-primary btn-info" id="allBtn">查詢更多步道</button>
+                </div>
+                <p class="text-info">*以下表格建議以電腦裝置瀏覽*</p>
+                <div class="row mx-auto text-center">
+                    <table id="allTable" class="table table-light table-hover">
+
+                        <thead>
+                            <tr>
+                                <th>步道名稱</th>
+                                <th>步道入口</th>
+                                <th>海拔高度</th>
+                                <th>步道長度</th>
+                                <th>步道類型</th>
+                                <th class="w-25">步道類型特色</th>
+                            </tr>
+                        </thead>
+                        <tbody id="allTbody">
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+
+
+
+</body>
+<footer class="mt-5 bg-secondary-subtle text-center pt-2 pb-2">資料來源： 台灣山林悠遊網 & Lorem Picsum</footer>
+
+</html>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
+    integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.js"></script>
+
+<script>
+
+    $(document).ready(function () {
+        //綁定連結到常數
+        const myCarousel = $('#myCarousel');
+        const walksAPI = 'https://data.coa.gov.tw/Service/OpenData/ForestRtBasic.aspx?IsTransData=1&UnitId=D51';
+        const allBtn = $('#allBtn');
+        const allTable = $('#allTable');
+        const allTbody = $('#allTbody');
+
+        let allWalks = '';
+
+        myCarousel.on('slide.bs.carousel', function (event) {
+
+            let activeSlideIndex = $(event.relatedTarget).index();
+
+            $('.conWalks').hide();
+
+            if (activeSlideIndex === 0) {
+                $('#ez').show();
+            } else if (activeSlideIndex === 1) {
+                $('#mid').show();
+            } else if (activeSlideIndex === 2) {
+                $('#hard').show();
+            }
+
+        })
+
+
+        allTable.hide();
+        allBtn.click(function () {
+            //以AJAX取得json資料範例如下：
+            // TRAILID:"005"; TR_ADMIN: "羅東林區管理處"; TR_ADMIN_PHONE: "03-954-5114轉育樂課"; 
+            // TR_ALT: "280"; TR_BEST_SEASON: "四季皆宜"; TR_CLASS: "區域級步道"; 
+            // TR_CNAME: "拳頭姆自然步道"; TR_DIF_CLASS: "1"; TR_ENTRANCE: "宜蘭縣三星鄉"; 
+            // TR_LENGTH: "1.3公里"; TR_MAIN_SYS: "宜蘭-太平山區域步道系統"; TR_PAVE: "原木及碎木屑鋪設"; 
+            // TR_POSITION: "宜蘭縣三星鄉"; TR_SPECIAL: ""; TR_SUB_SYS: "宜蘭環山子區域步道系統"; 
+            // TR_TOUR: "半日"
+
+            allTable.show();
+            $.ajax({
+                type: "GET",
+                url: walksAPI,
+                dataType: "json",
+                success: function (response) {
+                    let walksJSON = response;
+                    // console.log('walksJSON', walksJSON);  
+
+                    walksJSON.forEach((value, key) => {
+                        // console.log('key:',key, '; value:' ,value.TR_CNAME);
+
+                        allWalks = allWalks + `
+                            <tr >
+                                <td>${value.TR_CNAME}</td>
+                                <td>${value.TR_ENTRANCE} </td>
+                                <td>${value.TR_ALT} </td>
+                                <td>${value.TR_LENGTH} </td>
+                                <td>${value.TR_PAVE} </td>
+                                <td>${value.TR_SPECIAL} </td>
+                            </tr>                    
+                        `;
+                    });
+                    allTbody.append(allWalks);
+                    allTable.DataTable({
+                        language: {
+                            url: '//cdn.datatables.net/plug-ins/1.13.6/i18n/zh-HANT.json',
+                        },
+                    });
+
+
+                },
+                // AJEX取用資料失敗時訊息
+                error: () => {
+                    console.log('請求失敗');
+                }
+            });
+            //AJAX ends    
+        });
+        //allBtn ends
+    })
+    //jQ ends
+
+</script>
+
+<!-- 
+    未來可延伸：
+    1. 介接3日內氣象 (待找精準數據來)
+    2. 介接林務局自然教育
+  https://data.coa.gov.tw/Service/OpenData/ForestNcLesson.aspx?IsTransData=1&UnitId=D48
+
+-->

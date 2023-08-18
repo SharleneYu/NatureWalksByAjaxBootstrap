@@ -30,9 +30,9 @@
 
             <!-- Indicators/dots -->
             <div class="carousel-indicators">
-                <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
-                <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
-                <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+                <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active"></button>
+                <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1"></button>
+                <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2"></button>
             </div>
 
             <!-- The slideshow/carousel -->
@@ -68,10 +68,10 @@
             </div>
 
             <!-- Left and right controls/icons -->
-            <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+            <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
                 <span class="carousel-control-prev-icon"></span>
             </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+            <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
                 <span class="carousel-control-next-icon"></span>
             </button>
         </div>
@@ -79,7 +79,7 @@
     </div>
 
     <div class="container mt-3 conWalks" id="ez">
-        <div class="row mx-auto ps-5 d-flex">
+        <div class="row mx-auto ps-5 d-flex justify-content-around">
             <div class="col-lg-4 col-sm-12 mt-2">
                 <div class="card" style="width: 18rem;">
                     <img src="./IMGS/EZ_茂興懷舊步道.jpg" class="card-img-top" alt="茂興懷舊步道">
@@ -178,7 +178,7 @@
     </div>
 
     <div class="container mt-3  conWalks" id="mid">
-        <div class="row mx-auto ps-5 d-flex">
+        <div class="row mx-auto ps-5 d-flex justify-content-around">
             <div class="col-lg-4 col-sm-12 mt-2">
                 <div class="card" style="width: 18rem;">
                     <img src="./IMGS/MID_滿月圓國家森林遊樂區步道群.jpg" class="card-img-top" alt="滿月圓步道群">
@@ -279,14 +279,14 @@
     </div>
 
     <div class="container mt-3  conWalks" id="hard">
-        <div class="row mx-auto ps-5">
+        <div class="row mx-auto ps-5 d-flex justify-content-around">
             <div class="col-lg-4 col-sm-12 mt-2">
                 <div class="card" style="width: 18rem;">
                     <img src="./IMGS/HARD_福巴越嶺國家步道.jpg" class="card-img-top" alt="福巴越嶺國家步道">
                     <div class="card-body">
                         <h5 class="card-title">福巴越嶺國家步道
                         </h5>
-                        <p class="card-text">全程17.5公里原始山徑，整個路徑貫穿拉拉山巨木區及插天山自然保留區，沿線有許多紅檜巨木，也是野生動物生活的重要棲地環境，物種豐富多樣...</p>
+                        <p class="card-text">全程17.5公里原始山徑，路徑貫穿拉拉山巨木區及插天山自然保留區，沿線有許多紅檜巨木、是野生動物的重要棲地，物種豐富多樣...</p>
                         <a href="https://recreation.forest.gov.tw/Trail/RT?typ=1&tr_id=024"
                             class="btn btn-danger">更多資訊</a>
                     </div>
@@ -464,6 +464,8 @@
             // TR_TOUR: "半日"
 
             allTable.show();
+            allBtn.hide();
+
             $.ajax({
                 type: "GET",
                 url: walksAPI,
